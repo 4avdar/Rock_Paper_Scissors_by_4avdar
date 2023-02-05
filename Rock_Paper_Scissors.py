@@ -1,45 +1,52 @@
 import random
 
+while True:
+
+    rock = 'Rock'
+    paper = 'Paper'
+    scissors = 'Scissors'
+
+    player_move = input('Choose [r]ock, [p]aper or [s]cissors:')
 
 
-rock = 'Rock'
-paper = 'Paper'
-scissors = 'Scissors'
+    if player_move == 'r':
+        player_move = rock
 
-player_move = input('Choose [r]ock, [p]aper or [s]cissors:')
+    elif player_move == 'p':
+        player_move = paper
+    elif player_move == 's':
+        player_move = scissors
+    else:
+        raise SystemExit('Invalid Input. Try again...')
 
+    computer_random_number = random.randint(1, 3)
 
-if player_move == 'r':
-    player_move = rock
+    computer_move = ''
 
-elif player_move == 'p':
-    player_move = paper
-elif player_move == 's':
-    player_move = scissors
-else:
-    raise SystemExit('Invalid Input. Try again...')
+    if computer_random_number == 3:
+        computer_move = rock
+    elif computer_random_number == 1:
+        computer_move = scissors
+    else:
+        computer_move = paper
+    print(f'The computer choose {computer_move}')
 
-computer_random_number = random.randint(1, 3)
+    if player_move == rock and computer_move == scissors or \
+        player_move == paper and computer_move == rock or \
+        player_move == scissors and computer_move == paper:
+        print('You win')
 
-computer_move = ''
+    elif player_move == computer_move:
+        print('Draw')
 
-if computer_random_number == 3:
-    computer_move = rock
-elif computer_random_number == 1:
-    computer_move = scissors
-else:
-    computer_move = paper
-print(f'The computer choose {computer_move}')
+    else:
+        print('You lose')
 
-if player_move == rock and computer_move == scissors or \
-    player_move == paper and computer_move == rock or \
-    player_move == scissors and computer_move == paper:
-    print('You win')
+    print('One more game?')
+    answer = input()
 
-elif player_move == computer_move:
-    print('Draw')
-
-else:
-    print('You lose')
-
-
+    if answer == 'yes' or answer == 'y' or answer == 'sure':
+        continue
+    else:
+        print('Thank you for playing!')
+        break
