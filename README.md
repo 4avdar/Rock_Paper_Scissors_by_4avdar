@@ -29,3 +29,10 @@ There is no time or lives.
 
 
 [Source Code](Rock_Paper_Scissors.py)
+
+You can try it here:
+[<img alt='Play Button' src='https://user-images.githubusercontent.com/124185180/216816921-c59dcc1d-1453-4bb2-9d7b-3d103d4ca490.png' />](https://replit.com/@4avdar/RockPaperScissors#main.py)
+
+
+
+
